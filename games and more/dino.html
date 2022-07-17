@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+<head>
+    <meta charset="UTF-8">
+    <title>Jump Game</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 30px;
+    overflow-x: hidden;
+}
+.game{
+    margin-top: 4em;
+    width: 700px;
+    height: 300px;
+    border: 4px dotted black;
+    margin: auto;
+}
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position:relative;
+    top: 150px;
+}
+.animate{
+    animation: jump 1s linear;
+}
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+#block{
+    background-color: rgb(103, 103, 241);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 100px;
+    left: 500px;
+    animation: block 5s infinite linear;
+}
+@keyframes block{
+    0%{left: 500px}
+    100%{left: -20px}
+}
+p{
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="game">
+        <div id="character"></div>
+        <div id="block"></div>
+    </div>
+    <p>Score: <span id="scoreSpan"></span></p>
+</body>
+<script src="./dino.js"></script>
+</html>
